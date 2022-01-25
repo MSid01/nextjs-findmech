@@ -1,0 +1,108 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "News Article 1",
+      "description": "Description 1",
+      "category": "sports"
+    },
+    {
+      "id": 2,
+      "title": "News Article 2",
+      "description": "Description 2",
+      "category": "politics"
+    },
+    {
+      "id": 3,
+      "title": "News Article 3",
+      "description": "Description 3",
+      "category": "sports"
+    }
+  ],
+  "comments":[
+    { "id":1, "body":"This is extraordinary post", "postid":1, "useid": 3},
+    { "id":2, "body":"This is stale post", "postid":2, "useid": 2},
+    { "id":3, "body":"This is beyond chemistry", "postid":3, "useid": 6},
+    { "id":4, "body":"This post is written in gods language", "postid":4, "useid": 7}
+  ],
+  "posts": [
+    { "id": 1, "title": "json-server-typicode", "author": "typicode" },
+    { "id": 2, "title": "Strayed man", "author": "jammy" },
+    { "id": 3, "title": "God's promise", "author": "alex" },
+    { "id": 4, "title": "Sorrow of siddhesh", "author": "sundar" },
+    { "id": 5, "title": "Sorrow of sss", "author": "sundar" },
+    { "id": 7, "title": "World of jam", "author": "permod" }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Event 1",
+      "description": "Description 1",
+      "category": "sports",
+      "date": 1611115269
+    },
+    {
+      "id": 2,
+      "title": "Event 2",
+      "description": "Description 2",
+      "category": "technology",
+      "date": 1642651269
+    },
+    {
+      "id": 3,
+      "title": "Event 3",
+      "description": "Description 3",
+      "category": "food",
+      "date": 1327032069
+    },
+    {
+      "id": 4,
+      "title": "Event 4",
+      "description": "Description 4",
+      "category": "food",
+      "date": 1390190469
+    },
+    {
+      "id": 5,
+      "title": "Event 5",
+      "description": "Description 5",
+      "category": "sports",
+      "date": 1453262469
+    },
+    {
+      "id": 6,
+      "title": "Event 6",
+      "description": "Description 6",
+      "category": "art",
+      "date": 1332424069
+    },
+    {
+      "id": 7,
+      "title": "Event 7",
+      "description": "Description 7",
+      "category": "technology",
+      "date": 978321669
+    },
+    {
+      "id": 8,
+      "title": "Event 8",
+      "description": "Description 8",
+      "category": "sports",
+      "date": 1484884869
+    },
+    {
+      "id": 9,
+      "title": "Event 9",
+      "description": "Description 9",
+      "category": "food",
+      "date": 1516420869
+    },
+    {
+      "id": 10,
+      "title": "Event 10",
+      "description": "Description 10",
+      "category": "sports",
+      "date": 1232424069
+    }
+  ]
+}

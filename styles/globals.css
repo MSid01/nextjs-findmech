@@ -1,16 +1,20 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ais-RefinementList-list{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.ais-Hits-list{
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
-* {
-  box-sizing: border-box;
+.ais-Hits-item{
+    width: calc(50% - 1rem);
+    margin-left: auto;
+    margin-right: auto;
 }
