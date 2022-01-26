@@ -6,7 +6,7 @@ export default function Desktopnav() {
     <div className="flex space-x-5">
       <Link href="/">
         <a className="flex items-center py-4 ">
-          <span className="font-mono font-bold text-xl text-gray-200 text-lg">
+          <span className="font-mono font-bold text-xl text-red-300 text-lg">
             FindMech
           </span>
         </a>
@@ -15,7 +15,7 @@ export default function Desktopnav() {
         {
             navMenu.map((item, index)=>(
                 <Link key={index} href={item.link}>
-          <a className="py-2 px-2 text-red-500 font-semibold decoration-red-500 hover:text-red-300">
+          <a className="py-2 px-2 text-white font-bold decoration-red-500 hover:text-red-500 ">
             {item.title}
           </a>
         </Link>

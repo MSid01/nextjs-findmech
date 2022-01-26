@@ -43,7 +43,7 @@ function Mobilenav() {
           {navMenu.map((item, index) => (
             <li
               key={index}
-              className="py-2 px-4 text-red-500 font-semibold hover:bg-red-500 hover:text-white rounded"
+              className="py-2 px-4 text-white font-semibold hover:bg-red-500 hover:text-white rounded"
             >
               <Link href={item.link}>
                 <a className="flow-root" onClick={() => {
@@ -55,7 +55,7 @@ function Mobilenav() {
           {secondarymenu.map((item, index) => (
             <li
               key={index}
-              className="py-2 w-full px-4 text-red-500 font-semibold hover:bg-red-500 hover:text-white rounded"
+              className="py-2 w-full px-4 text-white font-semibold hover:bg-red-500 hover:text-white rounded"
             >
               <Link href={item.link}>
                 <a className="flow-root" onClick={() => {

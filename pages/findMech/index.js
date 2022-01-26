@@ -8,8 +8,8 @@ import { findResultsState } from 'react-instantsearch-dom/server';
 import { Head, App } from '../../components';
 
 const searchClient = algoliasearch(
-  'latency',
-  '6be0576ff61c053d5f9a3225e2a90f76'
+  "MUM7JXG8NH",
+  "368b81ac1505a0bf2f461971d6f208ba"
 );
 
 const updateAfter = 700;
@@ -24,7 +24,7 @@ const searchStateToURL = (searchState) =>
 
 const DEFAULT_PROPS = {
   searchClient,
-  indexName:"demo-geosearch" ,
+  indexName:"findMechgarages" ,
 };
 
 class Page extends React.Component {
