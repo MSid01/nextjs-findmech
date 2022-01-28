@@ -28,7 +28,7 @@ function Intro() {
         alt="home"
         width={450}
         height={450}
-        quality={50}
+        quality={40}
       />
     </div>
   </div>

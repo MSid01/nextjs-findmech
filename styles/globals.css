@@ -46,10 +46,10 @@
     background: #fcc4c9;
   }
 
-header .ais-SearchBox-form > input{
+/* header .ais-SearchBox-form > input{
     border: 1px solid #111827;
-    /* padding-left: 45px; */
-}
+    padding-left: 45px;
+} */
 /* header .ais-SearchBox-form > button{
     border-right: 3px solid #111827;
     width: 36px;
@@ -64,4 +64,14 @@ header .ais-SearchBox-form > input{
 
 .ais-RefinementList-labelText{
     margin-left:3px;
+}
+
+.address > span > span, .address > span > em {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 639px) {
+    .address > span > span, .address > span > em {
+        font-size: 1rem;
+    }   
 }
