@@ -74,4 +74,7 @@
     .address > span > span, .address > span > em {
         font-size: 1rem;
     }   
+    .garage-image{
+        height:10rem;
+    }
 }

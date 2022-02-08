@@ -6,8 +6,11 @@ export default function Desktopnav() {
     <div className="flex space-x-5">
       <Link href="/">
         <a className="flex items-center py-4 ">
-          <span className="font-mono font-bold text-xl text-red-300 text-lg">
-            FindMech
+          <span className="font-serif font-bold text-xl text-white">
+            Find
+          </span>
+          <span className="font-serif font-bold text-xl text-red-400">
+            Mech
           </span>
         </a>
       </Link>
