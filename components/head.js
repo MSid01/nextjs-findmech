@@ -43,3 +43,4 @@ Head.propTypes = {
 };
 
 export default Head;
+

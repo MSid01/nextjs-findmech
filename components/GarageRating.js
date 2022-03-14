@@ -6,7 +6,7 @@ const GarageRating = ({props})=>{
         <Rating
               sx={{ zIndex: props.zIndex}}
               name="read-only"
-              value={props.rating}
+              value={parseInt(props.rating)}
               size= {props.garageDetails?"md":"small"}
               readOnly
             />

@@ -2,7 +2,6 @@ import React from 'react';
 // import Link from "next/link";
 function GarageDetails({garage}) {
     const {attributes} = garage.data;
-    console.log(attributes);
   return <div>
           <h1>{attributes.garage_name}</h1>
           <h2>{attributes.garage_rating}</h2>
