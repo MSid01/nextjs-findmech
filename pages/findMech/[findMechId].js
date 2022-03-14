@@ -31,7 +31,7 @@ function GarageDetails({ garage, average_rating }) {
                 <div className="w-full self-center h-56 relative drop-shadow-md">
                   <Image
                     className="rounded"
-                    src={`https://res.cloudinary.com/sidster/image/upload/v1643391269/christian_buehner_Fd6osy_Vbt_G4_unsplash_5fff00442e.jpg`}
+                    src={`https://res.cloudinary.com/sidster/image/upload/v1647282591/recha_oktaviani_t_61ap00_Mc_unsplash_1_a2b129ee79.jpg`}
                     alt={product.product_name}
                     layout="fill"
                     quality={25}
