@@ -42,8 +42,6 @@ const HitComponent = ({ hit }) => {
   var total_rating = parseInt(hit.garage_rating);
   var number_of_visitors = parseInt(hit.number_of_visitors);
 
-  var garage_rating = (total_rating/number_of_visitors).toFixed(1);
-
   return (
     <div className="hit sm:flex">
       <div className="w-full relative z-[-1] sm:w-2/5 garage-image">
@@ -66,8 +64,7 @@ const HitComponent = ({ hit }) => {
           />
         </div>
         <div className="flex">
-          <div></div>
-          <GarageRating props={{ rating: garage_rating, zIndex: -1 }} />
+          <GarageRating total_rating={total_rating} number_of_visitors={number_of_visitors}/>
         </div>
         <div className="flex">
           <div className="pt-1 pr-2">
@@ -150,10 +147,10 @@ const HitComponent = ({ hit }) => {
           <div className="">{`${hit.owner_first_name} ${hit.owner_last_name}`}</div>
         </div>
         <div className="flex py-1 justify-between">
-          <span className="px-3 py-1  text-base rounded-full text-white  bg-red-500 ">
+          <span className="px-3 py-1  text-base rounded-2xl text-white font-semibold bg-red-500 hover:bg-red-700 ">
             <a href={`tel:${hit.garage_phn_num}`}>Call</a>
           </span>
-          <span className="px-4 py-1 text-base rounded-full text-gray-200 font-semibold bg-gray-900 ">
+          <span className="px-4 py-1 text-base rounded-2xl text-white font-semibold bg-gray-700 hover:bg-gray-900 ">
             <Link href={`/findMech/${hit.objectID}`}>See more</Link>
           </span>{" "}
         </div>
