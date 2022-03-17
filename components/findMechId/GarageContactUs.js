@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactUs({attributes}) {
   return (
-    <div className="rounded-sm shadow-md py-2 px-4">
+    <div className="rounded-sm shadow-md py-2 px-4 -order-1 sm:order-1">
             <div className="flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

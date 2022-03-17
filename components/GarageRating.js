@@ -1,7 +1,7 @@
-import Rating from "@mui/material/Rating";
-
 const GarageRating = ({total_rating, number_of_visitors})=>{
-  var garage_rating = (total_rating / number_of_visitors).toFixed(1);
+
+  var garage_rating = 0;
+  if(total_rating!==0) (garage_rating= total_rating / number_of_visitors).toFixed(1);
   const rating_array = [1, 2, 3, 4, 5];
   var rounded_rating = parseInt(garage_rating);
     return(

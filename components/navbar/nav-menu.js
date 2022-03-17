@@ -8,7 +8,7 @@ export const navMenu = [
         title: "About"
     },
     {
-        link:"/posts",
+        link:"/store",
         title: "Store"
     },
     {

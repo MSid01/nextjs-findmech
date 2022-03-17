@@ -1,21 +1,37 @@
-const Timetable = ({timetable})=>{
-    const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const currentday = new Date().getDay();
-    return(
-        <div className="rounded-sm shadow-md ring-opacity-5 py-2 px-3">
-            {
-                timetable.map(({start, end},index)=>{
-                    return(
-                        <div className={(index===currentday)?"inline-flex px-1 gap-1.5 bg-gray-800 font-bold text-white rounded-md":"flex px-1 gap-1.5"} key={index}>
-                            <span className="w-24">{weekdays[index]}</span>
-                            <span className="">{start.slice(0,5)}</span>
-                            <span className="">-</span>
-                            <span className="">{end.slice(0,5)}</span>
-                        </div>)
-                })
-            }
-        </div>
-    )
-}
+const Timetable = ({ timetable }) => {
+  const weekdays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const table_body_data_class="text-gray-200 font-medium px-6 py-1 whitespace-nowrap"
+  const currentday = new Date().getDay();
+  return (
+      <div className="rounded-sm shadow-md ring-opacity-5 py-2 px-1">
+      <table className="w-full">
+        <thead>
+          <tr className="border-b bg-gray-800">
+            <th className="text-left font-bold text-white px-6 py-2">Day</th>
+            <th className="text-left font-bold text-white px-6 py-2">From</th>
+            <th className="text-left font-bold text-white px-6 py-2">Day</th>
+          </tr>
+        </thead>
+        <tbody>
+          {timetable.map(({ start, end }, index) => (
+            <tr key={index}  className={ (currentday===index) ? "bg-gray-500":"bg-white border-b"}>
+              <td className={(currentday===index) ?table_body_data_class :"text-gray-900 font-light px-6 py-1 whitespace-nowrap"}>{weekdays[index]}</td>
+              <td  className={(currentday===index) ?table_body_data_class :"text-gray-900 font-light px-6 py-1 whitespace-nowrap"}>{start.slice(0, 5)}</td>
+              <td  className={(currentday===index) ?table_body_data_class :"text-gray-900 font-light px-6 py-1 whitespace-nowrap"}>{end.slice(0, 5)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      </div>
+  );
+};
 
 export default Timetable;

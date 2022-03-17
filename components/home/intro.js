@@ -22,13 +22,13 @@ function Intro() {
         </Link>
       </div>
     </div>
-    <div className="hidden md:block flex-1 md:flex justify-flex-start">
+    <div className="hidden flex-1 md:flex justify-flex-start">
       <Image
         src={mechanincImage}
         alt="home"
         width={450}
         height={450}
-        quality={40}
+        quality={10}
       />
     </div>
   </div>

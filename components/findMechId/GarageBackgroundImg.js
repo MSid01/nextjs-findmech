@@ -1,15 +1,10 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import GarageRating from "../GarageRating";
 
-function Garage_background_img({ props }) {
-  const attributes = props;
-
-  const large_img_url = attributes.garage_image.data.attributes.formats.large;
-  const original_img_url = attributes.garage_image.data.attributes.url;
-  var img_url = "";
-  if (large_img_url) img_url = large_img_url.url;
-  else img_url = original_img_url;
-
+function GarageBackgroundImg({ attributes }) {
+  const garage_thumbnail_img_url = attributes.garage_image.data.attributes.formats.thumbnail.url;
+  const garage_large_img_url = attributes.garage_image.data.attributes.formats.large.url;
+  
   const { street, city, landmark, district, state, postal_code } =
     attributes.address;
 
@@ -19,7 +14,7 @@ function Garage_background_img({ props }) {
     <div
       className="w-full h-96 mb-1"
       style={{
-        backgroundImage: `linear-gradient(rgb(11 10 10), rgb(255 255 255 / 0%)), url(${img_url})`,
+        backgroundImage: `linear-gradient(rgb(11 10 10), rgb(255 255 255 / 0%)), url(${garage_large_img_url ? garage_large_img_url : garage_thumbnail_img_url })`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundPosition: "center center",
@@ -79,4 +74,4 @@ function Garage_background_img({ props }) {
   );
 }
 
-export default Garage_background_img;
+export default GarageBackgroundImg;

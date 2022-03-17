@@ -1,18 +1,20 @@
 import React from "react";
 import Image from "next/image";
 import Timetable from "../../components/findMechId/GarageTimeTable";
-import Garage_background_img from "../../components/findMechId/GarageBackgroundImg";
+import GarageBackgroundImg from "../../components/findMechId/GarageBackgroundImg";
 import ContactUs from "../../components/findMechId/GarageContactUs";
 import GarageServices from "../../components/findMechId/GarageServices";
+import client from "../../apollo-client/apollo-client";
+import { GET_GARAGE_INITIAL_DATA_BY_ID } from "../../apollo-client/graphqlFunctions";
 // import Link from "next/link";
-function GarageDetails({ garage, average_rating }) {
+function GarageDetails({ garage }) {
   const { attributes } = garage.data;
 
   return (
     <div className="flex flex-col m-1 md:flex-row gap-1.5">
       <div className="flex-[5] md:flex-[8] lg:flex-[7]">
         {/* image background div */}
-        <Garage_background_img props={attributes} />
+        <GarageBackgroundImg attributes={attributes} />
         <div className="grid sm:grid-cols-2 gap-2 my-1">
           <Timetable timetable={attributes.timetable} />
           <ContactUs attributes={attributes} />
@@ -24,6 +26,8 @@ function GarageDetails({ garage, average_rating }) {
         <h2 className="font-bold text-2xl pl-4 pt-2 pb-4">Products</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-1 md:gap-x-2 md:mx-1 lg:grid-cols-2 lg:gap-x-2 lg:mx-2 gap-x-5 gap-y-2 mx-3">
           {attributes.products.map((product) => {
+            const product_small_img_url = product.product_image.data.attributes.formats.small.url
+            const product_thumbnail_url = product.product_image.data.attributes.formats.thumbnail.url;
             return (
               <div
                 className="flex bg-[#fbfaf9] rounded-md p-2 flex-col drop-shadow-lg"
@@ -32,7 +36,7 @@ function GarageDetails({ garage, average_rating }) {
                 <div className="w-full self-center h-56 relative drop-shadow-md">
                   <Image
                     className="rounded"
-                    src={`https://res.cloudinary.com/sidster/image/upload/v1647282591/recha_oktaviani_t_61ap00_Mc_unsplash_1_a2b129ee79.jpg`}
+                    src={product_small_img_url ?product_small_img_url: product_thumbnail_url}
                     alt={product.product_name}
                     layout="fill"
                     quality={25}
@@ -66,18 +70,11 @@ export default GarageDetails;
 
 export async function getServerSideProps(context) {
   const { findMechId } = context.query;
-  const response = await fetch(
-    `https://nearmech-backend.herokuapp.com/api/garages/${findMechId}?populate=*`
-  );
-  const garage = await response.json();
-  const average_rating_response = await fetch(
-    `https://nearmech-backend.herokuapp.com/api/garages/${findMechId}/avgRating`
-  );
-  const average_rating = await average_rating_response.json();
+  const {data, loading} = await client.query({query:GET_GARAGE_INITIAL_DATA_BY_ID, variables:{garageId:findMechId}});
   return {
     props: {
-      garage,
-      average_rating,
+      garage:data.garage,
+      loading
     },
   };
 }
