@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Intro from "../components/home/intro.js"
-import Features from "../components/home/features.js"
-import Testimonials from "../components/home/testimonials.js"
+import Intro from "../components/home/intro.js";
+import Features from "../components/home/features.js";
+import Testimonials from "../components/home/testimonials.js";
 
 export default function Home() {
   return (

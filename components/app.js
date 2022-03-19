@@ -264,8 +264,8 @@ export default class App extends React.Component {
           <div
             className={
               this.state.facetCityToggle
-                ? "absolute p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col md:w-1/5 lg:w-1/4 menu my-2"
-                : "hidden p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col md:w-1/5 lg:w-1/4 menu my-2"
+                ? "absolute p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col menu my-2"
+                : "hidden p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col menu my-2"
             }
           >
             <div>
@@ -287,14 +287,14 @@ export default class App extends React.Component {
               />
             </div>
           </div>
-          <div className="results w-full min-h-screen sm:px-8 md:w-3/5 lg:w-2/4 py-3 m-auto px-2">
+          <div className="results w-full min-h-screen pl-4 py-3">
             <Hits hitComponent={HitComponent} />
           </div>
           <div
             className={
               this.state.facetStateToggle
-                ? "absolute p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col md:w-1/5 lg:w-1/4 menu my-2"
-                : "hidden p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col md:w-1/5 lg:w-1/4 menu my-2"
+                ? "absolute p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col menu my-2"
+                : "hidden p-6 shadow-lg bg-white ring-1 ring-black ring-opacity-5 rounded-md md:flex md:static flex-col menu my-2"
             }
           >
             <div>
