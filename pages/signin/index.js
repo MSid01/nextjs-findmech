@@ -53,7 +53,7 @@ import { getSession, useSession, signIn, signOut } from "next-auth/react";
         return (
           <div className="hero">
             <div className="navbar">
-              {signOutButtonNode()}
+              {/* {signOutButtonNode()} */}
               {signInButtonNode()}
             </div>
             <div className="text">
@@ -70,7 +70,7 @@ import { getSession, useSession, signIn, signOut } from "next-auth/react";
           </Head>
           <div className="navbar">
             {signOutButtonNode()}
-            {signInButtonNode()}
+            {/* {signInButtonNode()} */}
           </div>
           <div className="text">
             Hello world

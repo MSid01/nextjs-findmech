@@ -19,7 +19,7 @@ export const navMenu = [
 
 export const secondarymenu=[
     {
-        link:"/googleauth",
+        link:"/api/auth/signin",
         title: "SignIn"
     },
 ]

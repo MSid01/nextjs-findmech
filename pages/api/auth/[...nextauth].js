@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google"
+// import lgog from "../../../public/fmlo"
 // import { TypeORMLegacyAdapter } from "@next-auth/typeorm-legacy-adapter"
     
     const options = {
@@ -9,9 +10,15 @@ import GoogleProvider from "next-auth/providers/google"
           clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         }),
       ],
+      theme: {
+        colorScheme: "light", // "auto" | "dark" | "light"
+        brandColor: "#ef4444",
+        logo:"https://res.cloudinary.com/sidster/image/upload/v1647784210/Drawing_2_sketchpad_4_859e14cb36.png?updated_at=2022-03-20T13:50:28.704Z" 
+      },
       session: {
         strategy: "jwt",
         },
+        
       callbacks: {
         async jwt({ token,  user, account, profile, isNewUser }) {
           // Persist the OAuth access_token to the token right after signin
