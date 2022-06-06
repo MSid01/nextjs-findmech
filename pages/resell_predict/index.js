@@ -33,7 +33,6 @@ function CarPricePredictor({
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setPredicted_price(data.result.toFixed(2));
       });
   }
@@ -277,34 +276,6 @@ export async function getServerSideProps(context) {
     seller_type,
     transmission_type,
   } = await fetch(`http://127.0.0.1:5000/`).then((res) => res.json());
-
-  // await fetch("http://127.0.0.1:5000/predict", {
-  //   method: "POST",
-  //   mode: "no-cors", // no-cors, *cors, same-origin
-  //   cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-  //   // credentials: "same-origin",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify({
-  //     car_model: "Hyundai Grand i10",
-  //     companies: "Hyundai",
-  //     year: "2012",
-  //     fuel_type: "Diesel",
-  //     seller_type: "Individual",
-  //     transmission_type: "Manual",
-  //     kilos_driven: 0,
-  //     mileage: 0,
-  //     engine: 0,
-  //     max_power: 0,
-  //     seats: 0,
-  //   }),
-  // })
-  //   .then((response) => response.json())
-  //   .then((data) => {
-  //     console.log(data);
-  //   });
-
   return {
     props: {
       companies,
