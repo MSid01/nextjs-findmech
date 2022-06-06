@@ -5,7 +5,6 @@ import Close from "../../public/close.svg";
 import Link from "next/link";
 import { navMenu, secondarymenu } from "./nav-menu";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { user } from "pg/lib/defaults";
 
 function Mobilenav() {
   const {data:session} = useSession();

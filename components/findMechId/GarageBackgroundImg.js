@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import GarageRating from "../GarageRating";
+import GarageRating from "./GarageRating";
 
 function GarageBackgroundImg({ attributes }) {
   const garage_thumbnail_img_url = attributes.garage_image.data.attributes.formats.thumbnail.url;

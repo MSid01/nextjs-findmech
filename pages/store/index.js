@@ -6,7 +6,7 @@ import { GET_STORE_PRODUCTS } from "../../apollo-client/graphqlFunctions";
 const GetGarageProducts = ({ loading, data }) => {
   if (loading) return <div>Loading..</div>;
   return (
-    <div className="grid grid-cols-6 gap-3 p-4">
+    <div className="grid grid-cols-2 lg:grid-cols-5 sm:grid-cols-3 md:grid-cols-4  gap-3 p-4">
       {data.map((garage) => {
         return garage.attributes.products.map((product) => {
           const product_thumbnail_url =

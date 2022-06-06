@@ -22,13 +22,14 @@ import GoogleProvider from "next-auth/providers/google"
       callbacks: {
         async jwt({ token,  user, account, profile, isNewUser }) {
           // Persist the OAuth access_token to the token right after signin
-          // console.log("ye logged in", account);
           if (account) {
             token.accessToken = account.access_token;
             const response = await fetch(
               `${process.env.NEXT_PUBLIC_API_URL}/api/auth/${account.provider}/callback?access_token=${account?.access_token}`
             );
             const data = await response.json();
+            token.jwt = data.jwt;
+            token.id = data.user.id;
           }
           return token
         },

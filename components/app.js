@@ -11,7 +11,7 @@ import {
 } from "react-instantsearch-dom";
 import Image from "next/image";
 import Link from "next/link";
-import GarageRating from "./GarageRating";
+import GarageRating from "./findMechId/GarageRating";
 
 const HitComponent = ({ hit }) => {
   
@@ -261,6 +261,8 @@ export default class App extends React.Component {
           </div>
         </header>
         <main className="flex align-items-center px-5">
+          
+          
           <div
             className={
               this.state.facetCityToggle
@@ -287,9 +289,14 @@ export default class App extends React.Component {
               />
             </div>
           </div>
+         
+         
           <div className="results w-full min-h-screen pl-4 py-3">
             <Hits hitComponent={HitComponent} />
           </div>
+         
+
+         
           <div
             className={
               this.state.facetStateToggle
